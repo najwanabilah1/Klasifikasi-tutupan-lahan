@@ -1,0 +1,78 @@
+{
+  "dataset": "EuroSAT RGB",
+  "target": {
+    "positive": "Forest",
+    "negative": "non-Forest"
+  },
+  "class_names": [
+    "AnnualCrop",
+    "Forest",
+    "HerbaceousVegetation",
+    "Highway",
+    "Industrial",
+    "Pasture",
+    "PermanentCrop",
+    "Residential",
+    "River",
+    "SeaLake"
+  ],
+  "class_counts": {
+    "AnnualCrop": 3000,
+    "Forest": 772,
+    "HerbaceousVegetation": 3000,
+    "Highway": 2500,
+    "Industrial": 2500,
+    "Pasture": 2000,
+    "PermanentCrop": 2500,
+    "Residential": 3000,
+    "River": 2500,
+    "SeaLake": 3000
+  },
+  "split_sizes": {
+    "train": 17340,
+    "validation": 3716,
+    "test": 3716
+  },
+  "seed": 42,
+  "models": {
+    "random_forest": {
+      "accuracy": 0.9927341227125942,
+      "precision_macro": 0.9592739117247564,
+      "recall_macro": 0.9169923371647509,
+      "f1_macro": 0.9370418873628839,
+      "confusion_matrix": [
+        [
+          3592,
+          8
+        ],
+        [
+          19,
+          97
+        ]
+      ],
+      "feature_extraction_seconds": 12.162402000045404,
+      "training_seconds": 1.7031459999270737,
+      "prediction_seconds": 0.12697430001571774,
+      "features": "mean/std per RGB channel and per-channel histograms"
+    },
+    "cnn": {
+      "accuracy": 0.8681377825618946,
+      "precision_macro": 0.5936852802738554,
+      "recall_macro": 0.9194300766283525,
+      "f1_macro": 0.6213411814028701,
+      "confusion_matrix": [
+        [
+          3113,
+          487
+        ],
+        [
+          3,
+          113
+        ]
+      ],
+      "training_seconds": 127.8440650999546,
+      "prediction_seconds": 2.163448699982837,
+      "epochs": 5
+    }
+  }
+}
